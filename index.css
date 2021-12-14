@@ -1,0 +1,157 @@
+:root {
+  --wine-red: #C7375F;
+  --bright-red: #D42D2F;
+  --dark-green: #344D2F;
+  --light-green: #77A047;
+  --gold: #FAC57D;
+  --snow: #F0F4F7;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: var(--snow);
+    background: url(img/snowman.jpg) no-repeat;
+    background-size: cover;
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+.snowman-hangout-zone {
+    /* Limit the number of elves to 6 per row. */
+    /* Make sure that the elves stay in the elf hangout zone, no matter how many there are. */
+
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    margin-bottom: 2em;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 200px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+/* Max of 6 emoji in a row.  Had to add a 'space' after the snowman, because it's not worth 4bits for a character like the others */
+.snowman {
+    max-width: 24ch;
+}
+h1 { 
+    margin: 0;
+    font-size: 60px;
+    padding-bottom: 20px;
+    border-bottom: 10px dashed var(--bright-red);
+}
+p {
+    font-size: 30px;
+    color: var(--snow);
+    text-shadow: 2px 2px 2px var(--bright-red);
+}
+.snowman {
+    font-size: 30px;
+}
+
+button {
+    padding: 1em 2em;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px dashed var(--bright-red);
+    color: var(--bright-red);
+
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+    transform: scale(1.03);
+    outline: none;
+    background: rgba(0, 0, 0, 0.1);
+    border: 2px dashed var(--dark-green);
+    color: var(--dark-green);
+
+    
+}
+
+.number {
+    color: var(--dark-green);
+    font-size: 50px;
+    text-shadow: 2px 2px 2px var(--snow);
+
+}
+.food-title {
+    font-size: 30px;
+    padding-bottom: 20px;
+    border-bottom: 8px dashed var(--bright-red);
+    text-shadow: 2px 2px 2px var(--bright-red);
+
+
+}
+
+.container {
+    background: rgba(65, 159, 103, .4);
+    padding: 40px;
+    position: relative;
+}
+
+.reset-container {
+    display: none;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 2px 2px 20px var(--bright-red);
+    position: absolute;
+    height: 32%;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-50%);
+}
+.reset-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.reset {
+    color: var(--bright-red);
+    border: 2px dashed var(--bright-red);
+    font-size: 100px;
+    cursor: pointer;
+    padding: 100px 0;
+    width: 100%;
+}
+.reset:hover {
+    box-shadow: 2px 2px 20px var(--bright-red);
+}
+
+.play-jingle,
+.play-jingle:hover,
+.play-jingle:focus {
+    position: absolute;
+    top: 9.1%;
+    left: -37%;
+    transform: rotate(25deg);
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px dashed var(--bright-red);
+    color: var(--bright-red);
+    border-bottom-right-radius: 50%;
+}
+
+.play-jingle:hover {
+    box-shadow: 2px 2px 20px var(--bright-red);
+}
